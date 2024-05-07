@@ -73,11 +73,11 @@ const Header = () => {
               className="menu d-flex gap-5"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="header__closeButton">
+              {/* <div className="header__clos  eButton">
                 <span onClick={toggleMenu}> 
                   <i className="ri-close-fill"></i>
                 </span>
-              </div>
+              </div> */}
               <div className="mobileNavHeader">
                 <div className="mobileLogo">
                 <img src={logo} alt="logo" />
