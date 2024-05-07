@@ -9,6 +9,7 @@
   from {
     top: -100px;
   }
+
   to {
     top: 0px;
   }
@@ -87,10 +88,39 @@
   display: none;
 }
 
+/* mobile nav  */
+.mobileNavHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid red;
+  padding: 20px 20px;
+}
+
+.mobileLogo img {
+  width: 40px;
+  height: 40px;
+}
+
+.closeMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #df2020;
+  border: 2px solid red;
+  padding: 10px 13px;
+  border-radius: 50px;
+}
+
 @media only screen and (max-width: 992px) {
   .logo img {
     width: calc(100% - 70%);
   }
+
+  .navigation a {
+    padding-left: 2rem;
+  }
+
   .logo h5 {
     font-size: 0.8rem;
     margin-top: -15px;
@@ -110,13 +140,13 @@
   .menu {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 300px;
     height: 100%;
     background: #fff;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     z-index: 100;
     line-height: 20px;
   }
@@ -170,16 +200,17 @@
   .logo img {
     margin-top: -70px !important;
   }
+
   .logo h5 {
     margin-top: -55px;
   }
 }
 
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .menu {
     width: 100%;
   }
-} */
+}
 
 .close__button {
   width: fit-content;

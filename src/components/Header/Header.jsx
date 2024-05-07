@@ -70,13 +70,19 @@ const Header = () => {
           {/* ======= menu ======= */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div
-              className="menu d-flex align-items-center gap-5"
+              className="menu d-flex gap-5"
               onClick={(event) => event.stopPropagation()}
             >
               <div className="header__closeButton">
-                <span onClick={toggleMenu}>
+                <span onClick={toggleMenu}> 
                   <i className="ri-close-fill"></i>
                 </span>
+              </div>
+              <div className="mobileNavHeader">
+                <div className="mobileLogo">
+                <img src={logo} alt="logo" />
+                </div>
+                <div className="closeMenu" onClick={toggleMenu} >X</div>
               </div>
               {nav__links.map((item, index) => (
                 <NavLink
